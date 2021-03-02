@@ -1,12 +1,9 @@
 $(function() {
 
-    $.get('http://192.168.0.79', function(data) {
-            if (data != null) {
-                console.log('Online');
-                $('#status').text('Online');
-                $('#statusIndicator').css('background-color', '#00FF90')
-            }
-    });
+  const max = 'http://192.168.0.82/';
+  const test = 'http://192.168.0.79/';
+
+  const ip = max;
 
 
     var colorPicker = new iro.ColorPicker("#picker", {
@@ -18,11 +15,27 @@ $(function() {
         margin: 30
       });
 
+      $.get(ip + 'status', function(data) {
+        if (data != null) {
+          $('#status').text('Online');
+          $('#statusIndicator').css('background-color', '#00FF90')
+  
+          const greenIndex = data.indexOf('g');
+          const blueIndex = data.indexOf('b');
+  
+          const redVal = data.slice(1, greenIndex)
+          const greenVal = data.slice(greenIndex + 1, blueIndex);
+          const blueVal = data.slice(blueIndex + 1, data.length);
+          
+          colorPicker.color.rgb = { r: redVal, g: greenVal, b: blueVal }
+        }
+      });
+
       colorPicker.on('input:end', function(color) {
         console.log(color.rgb);
         let appendURL = `?r${color.rgb.r}g${color.rgb.g}b${color.rgb.b}&`;
 
-        $.get('http://192.168.0.79/' + appendURL);
+        $.get(ip + appendURL);
       })
 });
 
