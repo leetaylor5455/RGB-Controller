@@ -45,7 +45,7 @@ header {
 
 
 .status {
-    margin: 40px;
+    margin: 20px;
 }
 
 #statusIndicator {
@@ -56,4 +56,13 @@ header {
     margin-left: 6px;
     margin-bottom: 1px;
     background-color: #FF003D;
+}
+
+#picker, .power-button {
+    opacity: .5;
+    pointer-events: none;
+}
+
+.power-button {
+    cursor: pointer;
 }

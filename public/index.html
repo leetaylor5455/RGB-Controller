@@ -43,6 +43,34 @@
     
         <div class="container content">
             <div class="status">Max's Light: <span id="status">Offline</span><div id="statusIndicator"></div></div>
+            <div class="power-button">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+                    <defs>
+                      <filter id="Ellipse_5" x="0" y="0" width="100" height="100" filterUnits="userSpaceOnUse">
+                        <feOffset dy="1" input="SourceAlpha"/>
+                        <feGaussianBlur stdDeviation="10" result="blur"/>
+                        <feFlood id="shadowColouring" flood-color="#00ff90" flood-opacity="0"/>
+                        <feComposite operator="in" in2="blur"/>
+                        <feComposite in="SourceGraphic"/>
+                      </filter>
+                    </defs>
+                    <g id="Power_Button" data-name="Power Button" transform="translate(-164 -145)">
+                      <g transform="matrix(1, 0, 0, 1, 164, 145)" filter="url(#Ellipse_5)">
+                        <circle id="Ellipse_5-2" data-name="Ellipse 5" cx="20" cy="20" r="20" transform="translate(30 29)" fill="#fff"/>
+                      </g>
+                      <g id="Ellipse_6" data-name="Ellipse 6" transform="translate(202.719 182.304)" fill="none" stroke="#FF003D" stroke-width="2">
+                        <circle cx="11.21" cy="11.21" r="11.21" stroke="none"/>
+                        <circle cx="11.21" cy="11.21" r="10.21" fill="none"/>
+                      </g>
+                      <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(213 181)" fill="#FF003D" stroke="#fff" stroke-width="2.5">
+                        <rect width="2" height="8" stroke="none"/>
+                        <rect x="-1.25" y="-1.25" width="4.5" height="10.5" fill="none"/>
+                      </g>
+                    </g>
+                </svg>
+                  
+            </div>
+              
             <div id="picker"></div>
         </div>
     </div>
