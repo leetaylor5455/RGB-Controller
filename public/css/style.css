@@ -65,4 +65,5 @@ header {
 
 .power-button {
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
