@@ -2,8 +2,9 @@ $(function() {
 
   const max = 'http://192.168.0.82/';
   const test = 'http://192.168.0.79/';
+  const prod = 'http://192.169.99.192';
 
-  const ip = max;
+  const ip = prod;
   let isTurnedOn = false;
 
   function indicateOff() {
