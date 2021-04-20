@@ -2,9 +2,9 @@ $(function() {
 
   const max = 'http://192.168.0.82/';
   const test = 'http://192.168.0.79/';
-  const prod = 'http://192.168.234.192/';
+  const prod = 'http://192.168.220.192/';
 
-  const ip = prod;
+  let ip = prod;
   let isTurnedOn = false;
 
   function indicateOff() {
@@ -97,6 +97,12 @@ $(function() {
     let appendURL = `?r${color.rgb.r}g${color.rgb.g}b${color.rgb.b}&`;
 
     $.get(ip + appendURL);
+  });
+
+  $('#submitIP').on('click', function() {
+    const IPChange = $('#IPInput').val();
+    console.log(IPChange)
+    ip = `http://192.168.${IPChange}.192/`;
   });
 });
 

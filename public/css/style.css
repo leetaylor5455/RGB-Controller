@@ -67,3 +67,41 @@ header {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 }
+
+#IPOverride {
+    padding: 20px;
+}
+
+#IPInput {
+    width: 40px;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 1rem;
+    background-color: #6a7b8d;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+#submitIP {
+    background-color: #00FF90;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    padding: 4px;
+    outline: none;
+    font-weight: bold;;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
